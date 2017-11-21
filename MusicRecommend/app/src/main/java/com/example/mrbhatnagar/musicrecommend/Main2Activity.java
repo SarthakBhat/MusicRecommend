@@ -32,8 +32,36 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        /*
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
+
+
         v1 = (ImageView) findViewById(R.id.happy);
+        v2 = (ImageView) findViewById(R.id.love);
+        v3 = (ImageView) findViewById(R.id.peace);
+        v4 = (ImageView) findViewById(R.id.courage);
+        v5 = (ImageView) findViewById(R.id.sorrow);
+        v6 = (ImageView) findViewById(R.id.scourage);
+
+
+        /*
         Bitmap bm = BitmapFactory.decodeResource(getResources(),R.drawable.h1);
+        Bitmap bm1 = BitmapFactory.decodeResource(getResources(),R.drawable.l1);
+        Bitmap bm2 = BitmapFactory.decodeResource(getResources(),R.drawable.p1);
+        Bitmap bm3 = BitmapFactory.decodeResource(getResources(),R.drawable.c1);
+        Bitmap bm4 = BitmapFactory.decodeResource(getResources(),R.drawable.s1);
+        Bitmap bm5 = BitmapFactory.decodeResource(getResources(),R.drawable.sc1);*/
+
+        /*
+        v1.setImageBitmap(bm);
+        v2.setImageBitmap(bm1);
+        v3.setImageBitmap(bm2);
+        v4.setImageBitmap(bm3);
+        v5.setImageBitmap(bm4);
+        v6.setImageBitmap(bm5);*/
+
         v1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,8 +70,8 @@ public class Main2Activity extends AppCompatActivity {
                 h.execute();
             }
         });
-        v2 = (ImageView) findViewById(R.id.love);
-        Bitmap bm1 = BitmapFactory.decodeResource(getResources(),R.drawable.l1);
+
+
         v2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,8 +80,7 @@ public class Main2Activity extends AppCompatActivity {
                 l.execute();
             }
         });
-        v3 = (ImageView) findViewById(R.id.peace);
-        Bitmap bm2 = BitmapFactory.decodeResource(getResources(),R.drawable.p1);
+
         v3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,8 +89,6 @@ public class Main2Activity extends AppCompatActivity {
                 p.execute();
             }
         });
-        v4 = (ImageView) findViewById(R.id.courage);
-        Bitmap bm3 = BitmapFactory.decodeResource(getResources(),R.drawable.c1);
         v4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,9 +97,7 @@ public class Main2Activity extends AppCompatActivity {
                 c.execute();
             }
         });
-        v5 = (ImageView) findViewById(R.id.sorrow);
 
-        Bitmap bm4 = BitmapFactory.decodeResource(getResources(),R.drawable.s1);
         v5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,8 +106,6 @@ public class Main2Activity extends AppCompatActivity {
                 s.execute();
             }
         });
-        v6 = (ImageView) findViewById(R.id.scourage);
-        Bitmap bm5 = BitmapFactory.decodeResource(getResources(),R.drawable.sc1);
         v6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,17 +115,6 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     private class Happy extends AsyncTask<Void, Void, Void> {
